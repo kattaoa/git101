@@ -1,0 +1,53 @@
+# GIT
+
+# Get remote repo (after forking) to local hard drive:
+
+1. Go to remote repo on GitHub
+2. Copy link in dropdown from "Clone or download" → <url>
+3. Open Terminal
+4. Use `cd` to navigate to desired working directory
+5. Run `git clone` <url>
+
+
+# Updating remote repo from local repo:
+
+## Add file
+
+1. Create changes to local repo
+	- add new file called blank.txt to local repo
+2. Navigate to local repo
+3. View untracked files and more with `git status`
+4. Run `git add blank.txt`
+5. Double check with `git status`
+6. Commit with `git commit -m "first commit"`
+7. Ensure the remote repo is correctly linked via `git remote -v` → origin
+8. Run `git push -u origin master` to push local repo into master branch of origin remote repo
+
+## Remove file
+
+1. git rm blank.txt
+2. git status
+3. git commit -m "delete"
+4. git push -u origin master
+
+# Working with branches:
+
+## Create a new branch
+
+I added some preliminary files, used `git add` and `git commit`. Now let us create a new branch called "addfiles" with these commits.
+
+1. Create a new branch called addfiles: git checkout -b addfiles
+2. Check to make sure we have switched to the new branch: git branch
+
+
+## Push branch to GitHub 
+
+1. git push origin addfiles
+2. Manage pull requests, etc. in GitHub
+
+ 
+# Get changes from computer back to GitHub:
+
+1. Go to master branch: git checkout master
+2. Update local repo: git pull origin master
+   
